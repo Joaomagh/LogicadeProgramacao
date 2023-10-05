@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica em JavaScript</title>
+</head>
+<body>
+
+    <h1>Logica em JS</h1>
+    <button onclick="calcular('+')"> + </button>
+    <button onclick="calcular('-')"> - </button>
+    <button onclick="calcular('x')"> x </button>
+    <button onclick="calcular('/')"> / </button>
+    <button onclick="limpar('limpar')"> LIMPAR </button>
+    <div id="output"></div>
+
+    <script>
+        let numero = parseFloat(prompt("Digite o numero que quer calcular"));
+        
+        escreve();
+
+        function escreve() {
+            let output = document.querySelector("#output");
+            output.innerHTML = numero;
+        }
+
+        function calcular (sinal) {
+            let numero2 = parseFloat(prompt("Digite outro numero"));
+            if ( sinal == '+'){
+                numero += numero2;
+                escreve();
+            } else if ( sinal == '-') {
+                numero -= numero2;
+                escreve();
+            }  else if (sinal == 'x') {
+                numero *= numero2;
+                escreve();
+            } else if (sinal == '/') {
+                numero /= numero2;
+                escreve();
+            }
+            
+        }
+        
+        function limpar(){
+            numero = "";
+            escreve();
+            numero = parseFloat
+        }
+    </script>
+</body>
+</html>
